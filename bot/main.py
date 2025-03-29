@@ -7,7 +7,7 @@ from aiogram.enums import ParseMode
 
 from core.config import settings
 
-from core.routers import router as main_commands_router
+from routers import router as main_commands_router
 
 
 async def main() -> None:
@@ -28,10 +28,10 @@ async def main() -> None:
 
     # And the run events dispatching
     await dp.start_polling(bot)
-    await bot.send_message(
-        chat_id=int(settings.admin.admin),
-        text="Бот запущен!",
-    )
+    # await bot.send_message(
+    #     chat_id=settings.admin.id,
+    #     text="Бот запущен!",
+    # )
 
 
 if __name__ == "__main__":

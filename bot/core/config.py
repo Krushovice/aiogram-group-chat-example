@@ -15,7 +15,7 @@ class BotConfig(BaseModel):
 
 
 class AdminConfig(BaseModel):
-    admin: int
+    id: int
 
 
 class Settings(BaseSettings):
