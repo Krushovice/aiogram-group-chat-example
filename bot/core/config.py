@@ -8,6 +8,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 class DbConfig(BaseModel):
     url: str
+    echo: bool = False
+    echo_pool: bool = False
+    pool_size: int = 5
+    max_overflow: int = 10
 
 
 class BotConfig(BaseModel):
